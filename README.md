@@ -9,7 +9,7 @@ config, but can be done locally as below.
 ```bash
 $ dgraph zero --cwd=z0 --replicas=3 &
 $ dgraph zero --cwd=z1 --idx=2 --port_offset=1 --peer=localhost:5080 --replicas=3 &
-$ ./dgraph zero --cwd=z2 --idx=3 --port_offset=2 --peer=localhost:5080 --replicas=3 &
+$ dgraph zero --cwd=z2 --idx=3 --port_offset=2 --peer=localhost:5080 --replicas=3 &
 $ dgraph alpha --lru_mb=2048 --zero=localhost:5080 --cwd=a0 &
 $ dgraph alpha --lru_mb=2048 --zero=localhost:5080 --cwd=a1 --idx=2 --port_offset=1 &
 $ dgraph alpha --lru_mb=2048 --zero=localhost:5080 --cwd=a2 --idx=3 --port_offset=2 &
